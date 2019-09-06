@@ -9,7 +9,5 @@ class MachinesController < ApplicationController
     @snacks = Snack.all
   end
 
-  def self.avg_price
-    average(:price)
-  end
+
 end
