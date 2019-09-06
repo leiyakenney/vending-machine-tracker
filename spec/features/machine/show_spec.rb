@@ -1,7 +1,3 @@
-# As a user
-# When I visit a vending machine show page
-# I see the name of all of the snacks associated with that vending machine along with their price
-
 require 'rails_helper'
 
 RSpec.describe 'vending machine show page', type: :feature do
@@ -20,6 +16,10 @@ RSpec.describe 'vending machine show page', type: :feature do
       expect(page).to have_content("$1.50")
       expect(page).to have_content("M&Ms")
       expect(page).to have_content("$1.00")
+    end
+
+    it "shows an average price for all snacks in that machine" do
+      expect(page).to have_content("Average Price: $1.25")
     end
   end
 end

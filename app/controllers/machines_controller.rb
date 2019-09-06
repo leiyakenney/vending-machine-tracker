@@ -8,4 +8,8 @@ class MachinesController < ApplicationController
     @machine = Machine.find(params[:id])
     @snacks = Snack.all
   end
+
+  def self.avg_price
+    average(:price)
+  end
 end
