@@ -4,6 +4,8 @@ class MachinesController < ApplicationController
   end
 
   def show
+    @machines = Machine.all
     @machine = Machine.find(params[:id])
+    @snacks = Snack.all
   end
 end

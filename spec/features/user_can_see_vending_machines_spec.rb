@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe "When a user visits the vending machine index", type: :feature do
   scenario "they see a list of vending machine locations" do
     sam = Owner.create(name: "Sam's Snacks")
-    sam.machines.create(location: "Don's Mixed Drinks")
-    sam.machines.create(location: "Turing Basement")
+    sam_don = sam.machines.create(location: "Don's Mixed Drinks")
+    sam_turing = sam.machines.create(location: "Turing Basement")
 
     visit owner_machines_path(sam)
 
